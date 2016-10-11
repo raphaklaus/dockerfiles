@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: nginx
+    ports:
+     - "80:80"
+    volumes:
+     - ./nginx-sites:/etc/nginx/conf.d
+  redis:
+    image: redis
+  database:
+    image: mongo
